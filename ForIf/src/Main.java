@@ -36,6 +36,9 @@ public class Main {
         }*/
 
         printPyramid(5);
+
+        int[] test = new int[5];
+        test[0] = 1;
     }
 
     public static void printPyramid(int size) {
