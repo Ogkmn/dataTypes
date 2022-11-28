@@ -67,24 +67,4 @@ public class Airplane {
         System.out.printf("Plane %s lands.\n", this.identification);
         return true;
     }
-
-    public String getIdentification() {
-        return identification;
-    }
-
-    public int getMaxPassengers() {
-        return maxPassengers;
-    }
-
-    public int getCurrentPassengers() {
-        return currentPassengers;
-    }
-
-    public boolean isCurrentlyFlying() {
-        return isCurrentlyFlying;
-    }
-
-    public double getCruiseSpeed() {
-        return cruiseSpeed;
-    }
 }
