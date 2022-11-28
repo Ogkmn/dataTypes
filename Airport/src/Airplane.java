@@ -32,13 +32,13 @@ public class Airplane {
      * If the plane is not able to load of passengers,
      * for example when the plane is flying or the plane is already empty return false.
      */
-    public boolean unloadPassengers(){
-        if(this.isCurrentlyFlying || this.currentPassengers<1){
-            System.out.printf("Airplane %s is unable to unload %d passengers.\n",this.identification,this.currentPassengers);
+    public boolean unloadPassengers(int passengers){
+        if(this.isCurrentlyFlying || this.currentPassengers<1 || passengers>currentPassengers){
+            System.out.printf("Airplane %s is unable to unload %d passengers.\n",this.identification,passengers);
             return false;
         }
-        System.out.printf("Airplane %s unloads %d passengers.\n",this.identification, this.currentPassengers);
-        this.currentPassengers = 0;
+        System.out.printf("Airplane %s unloads %d passengers.\n",this.identification, passengers);
+        this.currentPassengers -= passengers;
         return true;
     }
 
